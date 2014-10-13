@@ -1,0 +1,21 @@
+{
+  "author": "Daniel Burrell",
+  "dependencies": [{"name":"maestrodev/wget", "version_requirement":">=1.5.6"}],
+  "license": "Licensed under (MIT)",
+  "name": "danielburrell-gitartifact",
+  "operatingsystem_support": [],
+  "project_page": "",
+  "requirements": [],
+  "source": "https://github.com/danielburrell/danielburrell-gitartifact",
+  "summary": "Download GitHub artifacts associated with releases on public or private repositories.",
+  "tags": ["GitHub","Artifact","Download","Release","Repository"],
+  "version": "0.1.1",
+  "operatingsystem_support":[{
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "10.04",
+        "12.04",
+        "14.04"
+      ]
+    }]
+}
