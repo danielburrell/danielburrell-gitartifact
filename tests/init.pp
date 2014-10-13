@@ -1,1 +1,1 @@
-include gitartefact
+include gitartifact
