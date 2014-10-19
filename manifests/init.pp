@@ -10,23 +10,25 @@
 #
 # Sample Usage:
 #
-class gitartifact ($account, $repository, $releasetag, $pattern, $oauth, $destination){
-  package { 'jq':
+class jq {
+  package { "jq":
     name   => 'jq',
     ensure => present,
   }
-  
-  wget::fetch { "Download artifact From GitHub":
-	  source      => getAssetUrl(getSource($account, $repository, $releasetag, $pattern, $oauth),$oauth),
-	  destination => $destination,
-	  timeout     => 0,
-	  verbose     => false,
-	  headers => ['Accept: application/octet-stream'],
-	  require => Package['jq']
-	}
-	
-	
-	
-  
- 
 }
+
+define gitartifact ($account, $repository, $releasetag, $pattern, $oauth, $destination) {
+  include ::gitartifact::jq
+
+  wget::fetch { "Download ${title} artifact From GitHub":
+    source      => getAssetUrl(getSource($account, $repository, $releasetag, $pattern, $oauth), $oauth),
+    destination => $destination,
+    timeout     => 0,
+    verbose     => false,
+    headers     => ['Accept: application/octet-stream'],
+    require     => Package['jq']
+  }
+  Class['jq'] -> Gitartifact["$title"]
+
+}
+

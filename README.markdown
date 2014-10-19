@@ -1,6 +1,6 @@
 # gitartifact #
 
-This is the gitartifact module. It allows you to download release-artifacts from public or private GitHub repositories.
+This is the gitartifact module. It allows you to download release-artifacts from private GitHub repositories (public repositories coming soon).
 
 Simply provide the account, repository name, release tag and some substring of the filename you want downloaded.
 
@@ -14,7 +14,7 @@ Useful for making package{} (dpkg) closed-source installations without needing t
 
 
 ```puppet
-class { "gitartifact":
+gitartifact { "gitartifact":
         account => "danielburrell",
         repository => "repo",
         releasetag => "0.0.2",
