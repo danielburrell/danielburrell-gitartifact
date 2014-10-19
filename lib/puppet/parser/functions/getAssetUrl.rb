@@ -3,7 +3,7 @@ module Puppet::Parser::Functions
     url = args[0].strip.tr('"', '')
     oauth = args[1]
     test = "#{url}?access_token=#{oauth}"
-	notice(test)
+    notice(test)
     test
   end
 end

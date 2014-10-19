@@ -9,7 +9,7 @@
   "source": "https://github.com/danielburrell/danielburrell-gitartifact",
   "summary": "Download GitHub artifacts associated with releases on public or private repositories.",
   "tags": ["GitHub","Asset","Artifact","Download","Release","Repository"],
-  "version": "0.2.2",
+  "version": "0.3.1",
   "operatingsystem_support":[{
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [

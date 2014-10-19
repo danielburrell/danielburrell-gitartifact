@@ -12,13 +12,12 @@ Useful for making package{} (dpkg) closed-source installations without needing t
 
 # Example #
 
-
 ```puppet
-gitartifact { "gitartifact":
+gitartifact { "mygitartifact":
         account => "danielburrell",
         repository => "repo",
         releasetag => "0.0.2",
-        pattern => ".deb",
+        pattern => "partialmatch.deb",
         oauth => "YOUR_OAUTH_TOKEN_HERE",
 		destination => '/home/dan/gitartifact_0.0.1-SNAPSHOT.deb',
 } 
